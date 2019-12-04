@@ -3,11 +3,11 @@
 # 和百度deepspeech的不同点
 ## 1.	框架选择
 
-背景：2019年3月12号十一贝科技智能语音组接受了公司新采购的GPU机器一台，由于新机器适配的驱动版本太高（2019年2月发布），当前语音转写模型使用的深度学习框架theano偏学术研究，theano的开发团队在17年就加入了google，已经停止维护，theano不支持分布式，相比之下tensorflow框架更偏工程，已经是主流框架，支持分布式，支持新硬件，我们有必要对转写工程做框架调整。
+背景：2019年3月12号十一贝科技公司智能语音组接受了公司新采购的GPU机器一台，由于新机器适配的驱动版本太高（2019年2月发布），当前语音转写模型使用的深度学习框架theano偏学术研究，theano的开发团队在17年就加入了google，已经停止维护，theano不支持分布式，相比之下tensorflow框架更偏工程，已经是主流框架，支持分布式，支持新硬件，我们有必要对转写工程做框架调整。
 
 百度模型框架：theano_0.8.2、keras_1.1.0
 
-新模型框架：tensorflow_1.13.1、keras_2.2.4
+十一贝模型框架：tensorflow_1.13.1、keras_2.2.4
 
 分析：根据调研资料显示，tensorflow新版本相比theano可以带来性能上一倍的提升，同时需要更大的内存。
  
@@ -60,6 +60,8 @@ gpu版：pip install https://index.taskcluster.net/v1/task/project.deepspeech.de
 
 
 # 模型部署
+
+
 ./speech_model里面放入训练好的pb模型，和训练集的std、mean数据
 
 ./LM_model里面放入训练好的n-gram语言模型
@@ -72,6 +74,8 @@ gpu版：pip install https://index.taskcluster.net/v1/task/project.deepspeech.de
 详细见./test_result/recongnnize_result.txt
 
 # 说明
+这里只开源训练和部署代码，不开源数据和模型，如果对有帮助你，烦请点个star。
+
 master分支是部署代码
 
 train分支是训练代码
