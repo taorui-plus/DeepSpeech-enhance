@@ -14,7 +14,7 @@
 ## 2.	声学模型结构
 在模型结构上主要做了6项调整，分析了每个调整项带来的影响：
 
-|调整项	| 老模型	| 新模型	| 准确率 | 	性能 | 	资源占用|
+|调整项	| 老模型	| 十一贝模型	| 准确率 | 	性能 | 	资源占用|
 |----|----|----|----|----|-----|
 |网络结构|	1D_CNN+3*GRU|	1_DCNN+3*BiGRU	|有提升|	降低近一倍|	更大的内存|
 |损失函数	|warp-ctc（baidu出品）	|tensorflow-ctc（google出品）	|不确定|	降低一点	|不确定|
@@ -31,7 +31,7 @@
 ## 4.	增加beam search和n-gram组合解码模块
 
 - 百度模型是贪婪搜索解码
-- 新模型的解码模块使用现在GitHub 上比较热门的mozilla基金会实现的beam search解码模型，在权威性、准确率和性能方面都比之前deepspeech好很多，调整后准确率平均提升6个百分点
+- 十一贝模型的解码模块使用现在GitHub 上比较热门的mozilla基金会实现的beam search解码模型，在权威性、准确率和性能方面都比之前deepspeech好很多，调整后准确率平均提升6个百分点
 
 
 
@@ -74,7 +74,7 @@ gpu版：pip install https://index.taskcluster.net/v1/task/project.deepspeech.de
 详细见./test_result/recongnnize_result.txt
 
 # 说明
-这里只开源训练和部署代码，不开源数据和模型，如果对有帮助你，烦请点个star。
+这里只开源训练和部署代码，不开源数据和模型，如果有帮助到你，烦请点个star。
 
 master分支是部署代码
 
