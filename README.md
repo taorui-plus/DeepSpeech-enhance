@@ -33,7 +33,8 @@
 |语音帧长|	20ms	|25ms	|有一点提升|	提升一点|	更小的内存|
 
 > 参考论文：http://proceedings.mlr.press/v48/amodei16.pdf
-论文博客：https://blog.csdn.net/qq_30262201/article/details/102654708
+
+> 论文博客：https://blog.csdn.net/qq_30262201/article/details/102654708
 
 ## 3.其他调整项：
 
@@ -51,7 +52,8 @@
 > 为了在解码过程中整合语言模型信息，Graves＆Jaitly（2014）使用其经过CTC训练的神经网络对由基于HMM的最新系统生成的晶格或n最佳假设列表进行评分。 这引入了潜在的混淆因素，因为n最佳列表会很大程度上限制可能的转录集。 另外，它导致整个系统仍然依靠HMM语音识别基础结构来获得最终结果。 相反，我们提出的首遍解码结果使用神经网络和语言模型从头开始解码，**而不是对现有假设进行重新排序**。
 
 > 以上来自论文：https://arxiv.org/pdf/1408.2873.pdf
-相关博客：https://blog.csdn.net/qq_30262201/article/details/102653937
+
+> 相关博客：https://blog.csdn.net/qq_30262201/article/details/102653937
 
 
 # deepspeech 环境搭建
